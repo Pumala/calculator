@@ -1,3 +1,12 @@
+/* micro clear fix */
+.grouping:before,
+.grouping:after {
+  content: " ";
+  display: table;
+}
+.grouping:after {
+  clear: both;
+}
 body {
     font-family: 'Play', sans-serif;
     margin: 0;
@@ -13,10 +22,6 @@ h1 {
     margin: 0;
     font-size: 2.25em;
     color: #45b7ea;
-}
-section {
-    display: flex;
-    flex-wrap: wrap;
 }
 input {
     box-sizing: border-box;
@@ -39,11 +44,12 @@ input {
     font-size: 1.5em;
     cursor: pointer;
 }
-#total2 {
-    margin-top: -25px;
+.total {
+    margin-top: -51px;
     position: absolute;
     right: .1%;
     padding-bottom: 1.95em;
+    padding-top: 40px;
 }
 section {
     position: relative;
@@ -61,8 +67,5 @@ section:last-child {
     }
     h1 {
         font-size: 3em;
-    }
-    #total2 {
-        padding-bottom: 2.05em;
     }
 }
